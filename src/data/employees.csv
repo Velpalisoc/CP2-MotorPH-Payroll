@@ -1,4 +1,4 @@
 employee_id,last_name,first_name,birthdate,address,phone,email,position,department,rate_per_hour
-EMP001,Dela Cruz,Juan,1990-05-15,Manila,09171234567,juan@example.com,Clerk,Admin,100
-EMP002,Santos,Maria,1992-08-10,Cebu,09182345678,maria@example.com,Technician,Engineering,120
-EMP003,Ramos,Carlos,1988-02-20,Davao,09193456789,carlos@example.com,Supervisor,Operations,150
+00001,Dela Cruz,Juan,1990-05-15,Manila,09171234567,juan@example.com,Clerk,Admin,100
+00002,Santos,Maria,1992-08-10,Cebu,09182345678,maria@example.com,Technician,Engineering,120
+00003,Ramos,Carlos,1988-02-20,Davao,09193456789,carlos@example.com,Supervisor,Operations,150

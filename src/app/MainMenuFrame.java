@@ -3,6 +3,7 @@ import util.LoginSession;
 import app.EmployeeForm;
 import app.EmployeeListFrame;
 import app.SalaryFrame;
+import app.UpdateDeleteFrame;
 import javax.swing.*;
 import javax.swing.JOptionPane;
 import java.awt.*;
@@ -60,6 +61,12 @@ public class MainMenuFrame extends JFrame {
         addEmployeeBtn.addActionListener(e -> {
     new EmployeeForm().setVisible(true);
 });
+        
+        JButton updateDeleteBtn = new JButton("Update/Delete Employee");
+        updateDeleteBtn.addActionListener(e -> {
+    new UpdateDeleteFrame().setVisible(true);
+});
+
 
         JButton logoutBtn = new JButton("Logout");
 
@@ -74,6 +81,7 @@ public class MainMenuFrame extends JFrame {
         btnPanel.add(viewByIdBtn);
         btnPanel.add(viewSalaryBtn);
         btnPanel.add(addEmployeeBtn);
+        panel.add(updateDeleteBtn);
         btnPanel.add(logoutBtn);
 
         add(welcomeLabel, BorderLayout.NORTH);

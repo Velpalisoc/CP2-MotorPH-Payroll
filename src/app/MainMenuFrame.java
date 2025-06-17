@@ -2,6 +2,7 @@ package app;
 import util.LoginSession;
 import app.EmployeeForm;
 import app.EmployeeListFrame;
+import app.SalaryFrame;
 import javax.swing.*;
 import javax.swing.JOptionPane;
 import java.awt.*;
@@ -51,6 +52,10 @@ public class MainMenuFrame extends JFrame {
 });
 
         JButton viewSalaryBtn = new JButton("View Salary Details");
+        viewSalaryBtn.addActionListener(e -> {
+    new SalaryFrame().setVisible(true);
+});
+
         JButton addEmployeeBtn = new JButton("Add New Employee");
         addEmployeeBtn.addActionListener(e -> {
     new EmployeeForm().setVisible(true);

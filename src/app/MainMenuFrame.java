@@ -71,7 +71,7 @@ public class MainMenuFrame extends JFrame {
         btnPanel.add(viewByIdBtn);
         btnPanel.add(viewSalaryBtn);
         btnPanel.add(addEmployeeBtn);
-        btnPanel.add(updateDeleteBtn); // ✅ FIXED THIS LINE
+        btnPanel.add(updateDeleteBtn);
         btnPanel.add(logoutBtn);
 
         add(welcomeLabel, BorderLayout.NORTH);

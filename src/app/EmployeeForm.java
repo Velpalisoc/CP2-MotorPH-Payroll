@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.io.*;
 
 public class EmployeeForm extends JFrame {
+    private static final String EMPLOYEE_FILE = "employees.csv";
     private JTextField nameField, positionField, rateField;
 
     public EmployeeForm() {
@@ -61,7 +62,7 @@ public class EmployeeForm extends JFrame {
         }
 
         private void saveToCSV(Employee emp) {
-            try (FileWriter writer = new FileWriter("employees.csv", true)) {
+            try (FileWriter writer = new FileWriter(EMPLOYEE_FILE, true)) {
                 writer.write(String.format("%05d,%s,%s,%.2f\n", emp.getId(), emp.getFullName(), emp.getPosition(), emp.getRatePerHour()));
             } catch (IOException ex) {
                 JOptionPane.showMessageDialog(null, "Error saving employee.", "File Error", JOptionPane.ERROR_MESSAGE);
@@ -69,10 +70,9 @@ public class EmployeeForm extends JFrame {
         }
 
         private String generateNextEmployeeId() {
-            String filePath = "employees.csv";
             int maxId = 0;
 
-            File file = new File(filePath);
+            File file = new File(EMPLOYEE_FILE);
             if (!file.exists()) return "00001"; // If file doesn't exist yet
 
             try (BufferedReader br = new BufferedReader(new FileReader(file))) {

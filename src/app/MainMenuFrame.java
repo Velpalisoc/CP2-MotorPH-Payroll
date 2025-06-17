@@ -1,7 +1,7 @@
 package app;
-import app.EmployeeForm;
-
 import util.LoginSession;
+import app.EmployeeForm;
+import app.EmployeeListFrame;
 import javax.swing.*;
 import java.awt.*;
 
@@ -16,6 +16,10 @@ public class MainMenuFrame extends JFrame {
         welcomeLabel.setFont(new Font("Arial", Font.BOLD, 16));
 
         JButton viewAllBtn = new JButton("View All Employees");
+        viewAllBtn.addActionListener(e -> {
+    new EmployeeListFrame().setVisible(true);
+});
+
         JButton viewByIdBtn = new JButton("View Employee by ID");
         JButton viewSalaryBtn = new JButton("View Salary Details");
         JButton addEmployeeBtn = new JButton("Add New Employee");

@@ -1,9 +1,10 @@
-import app.LoginFrame;
+package app;
+
+import javax.swing.SwingUtilities;
 
 public class Main {
     public static void main(String[] args) {
-        // Start GUI
-        javax.swing.SwingUtilities.invokeLater(() -> {
+        SwingUtilities.invokeLater(() -> {
             new LoginFrame().setVisible(true);
         });
     }

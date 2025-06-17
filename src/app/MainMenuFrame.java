@@ -1,4 +1,5 @@
 package app;
+import app.EmployeeForm;
 
 import util.LoginSession;
 import javax.swing.*;
@@ -18,6 +19,10 @@ public class MainMenuFrame extends JFrame {
         JButton viewByIdBtn = new JButton("View Employee by ID");
         JButton viewSalaryBtn = new JButton("View Salary Details");
         JButton addEmployeeBtn = new JButton("Add New Employee");
+        addEmployeeBtn.addActionListener(e -> {
+    new EmployeeForm().setVisible(true);
+});
+
         JButton logoutBtn = new JButton("Logout");
 
         logoutBtn.addActionListener(e -> {
